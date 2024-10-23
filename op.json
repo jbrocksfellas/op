@@ -1,0 +1,23 @@
+[
+  {
+    "projectName": "myproject",
+    "directory": "~/projects/myproject/development/myproject",
+    "commands": [
+      {
+        "commandName": "pm",
+        "action": "open_url",
+        "url": "https://www.notion.so"
+      },
+      {
+        "commandName": "code",
+        "action": "run_command",
+        "command": ["code", "."]
+      },
+      {
+        "commandName": "s",
+        "action": "run_command",
+        "command": ["gedit", "../../secrets/cred.txt"]
+      }
+    ]
+  }
+]

@@ -7,6 +7,7 @@ DOWNLOAD_URL="https://github.com/jbrocksfellas/op/raw/refs/heads/master/dist/op"
 
 # Create the target directory if it doesn't exist
 mkdir -p $TARGET_DIR
+mkdir -p $HOME/.op
 
 # Download the executable
 echo "Downloading $EXECUTABLE from $DOWNLOAD_URL..."
