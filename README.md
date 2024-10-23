@@ -14,8 +14,6 @@ Welcome to OP! This tool helps you navigate between your projects and project ma
 
 1. **Set Up the Executable**
 
-After building the executable, you can set it up to be used as a command called `op` by running:
-
 #### Using `curl` or `wget`
 
 You can set up OP with a single command:
