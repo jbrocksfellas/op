@@ -22,10 +22,10 @@ You can set up OP with a single command:
 
 ```bash
 # Using curl
-curl -L https://raw.githubusercontent.com/op/install.sh | bash
+curl -L https://raw.githubusercontent.com/jbrocksfellas/op/refs/heads/master/install.sh | bash
 
 # Using wget
-wget -O - https://raw.githubusercontent.com/op/install.sh | bash
+wget -O - https://raw.githubusercontent.com/jbrocksfellas/op/refs/heads/master/install.sh | bash
 ```
 
 2. **Set up the configuration**:
