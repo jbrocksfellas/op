@@ -18,11 +18,13 @@ Welcome to OP! This tool helps you navigate between your projects and project ma
 
 You can set up OP with a single command:
 
+**Using curl**
 ```bash
-# Using curl
 curl -L https://raw.githubusercontent.com/jbrocksfellas/op/refs/heads/master/install.sh | bash
+```
 
-# Using wget
+**Using wget**
+```bash
 wget -O - https://raw.githubusercontent.com/jbrocksfellas/op/refs/heads/master/install.sh | bash
 ```
 
