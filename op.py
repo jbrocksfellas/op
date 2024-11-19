@@ -27,12 +27,19 @@ def main():
             print(f"Command: {args.command}")
 
             # Example of handling different commands
+            expanded_directory = os.path.expanduser(project["directory"])
+            if args.command == "dirg":
+                os.system(f'xdg-open "{os.path.abspath(expanded_directory)}"')  # Linux
+            elif args.command == "dir":
+                # Detect the default shell (e.g., bash, zsh)
+                shell = os.environ.get("SHELL", "/bin/bash")
+                # Launch a new shell in the specified directory
+                subprocess.run([shell, "-c", f"cd {expanded_directory}; exec {shell}"])
 
             for command in project["commands"]:
                 if args.command == command["commandName"]:
                     try:
                         if command["action"] == "run_command":
-                            expanded_directory = os.path.expanduser(project["directory"])
                             os.chdir(expanded_directory)
                             subprocess.run(command["command"], check=True)
                         elif command["action"] == "open_url":
@@ -40,9 +47,12 @@ def main():
                                 ["google-chrome", "--new-tab", command["url"]],
                                 check=True,
                             )
+                        else:
+                            print(f"Unknown action: {command['action']}")
 
                     except Exception as e:
                         print(f"An error occurred: {e}")
+
 
 if __name__ == "__main__":
     main()
